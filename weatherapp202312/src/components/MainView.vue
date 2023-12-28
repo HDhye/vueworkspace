@@ -18,12 +18,12 @@
                 <p>10&deg;</p>
             </div>
             <div class="weatherIcon">
-                <img src="" alt="MainLogo"/>
+                <img src="~/assets/images/03d.png" alt="logo"/>
             </div>
             <div class="weatherData">
-                <div>
-                    <p></p>
-                    <p></p>
+                <div v-for="Temporary in temporaryData" :key="Temporary.title" class="detailData">
+                    <p>{{ Temporary.title }}</p>
+                    <p>{{ Temporary.value }}</p>
                 </div>
             </div>
         </div>
@@ -60,6 +60,33 @@
 
 <script>
 export default {
+
+    data() {
+        return {
+            
+        }
+    },
+    
+    computed: {
+        // 상세 날씨 데이터를 받아주는 데이터 할당
+        temporaryData() {
+            return [
+                {
+                    title: '습도',
+                    value: 0 + '%',
+                },
+                {
+                    title: '풍속',
+                    value: 0 + 'm/s',
+                },
+                {
+                    title: '체감온도',
+                    value: 0 + '도',
+                },
+            ];
+        },
+    }
+    
 
 }
 </script>
