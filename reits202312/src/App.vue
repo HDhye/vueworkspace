@@ -18,7 +18,6 @@
 
   <div class="product">
     <div>
-      <!--  -->
       <!--태그내부 :속성='데이터 키' -->
       <h4 :style="style">XX 원룸</h4>
       <p>{{ price1 }}</p>
