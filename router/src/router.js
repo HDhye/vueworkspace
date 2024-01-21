@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import routes from './routes'
+import routeProtecter from './components/route-protect';
 
 // `routes`를 옵션으로 전달해 라우터 인스턴스를 생성.
 const router = createRouter({
@@ -8,6 +9,11 @@ const router = createRouter({
   // history모드 createWebHistory(),
 
   routes, // `routes: routes`와 같음
+  
 })
+
+routeProtecter(router);
+
+
 
 export default router;
